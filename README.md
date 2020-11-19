@@ -1,1 +1,8 @@
 # Cat-VS-DogClassification
+In this we used convolution neural network to classify cat and dog images. Data set taken from kaggle. Kaggle Dogs v Cats dataset: https://www.kaggle.com/c/dogs-vs-cats.
+To increase accuracy we use image augmentation. it is a very simple, but very powerful tool to help you avoid overfitting your data. The concept is very simple though: If you have limited data, then the chances of you having data to match potential future predictions is also limited, and logically, the less data you have, the less chance you have of getting accurate predictions for data that your model hasn't yet seen. To put it simply, if you are training a model to spot cats, and your model has never seen what a cat looks like when lying down, it might not recognize that in future.
+Augmentation simply amends your images on-the-fly while training using transforms like rotation. So, it could 'simulate' an image of a cat lying down by rotating a 'standing' cat by 90 degrees. As such you get a cheap way of extending your dataset beyond what you have already. 
+
+Another useful tool is the Dropout. The idea behind Dropouts is that they remove a random number of neurons in your neural network. This works very well for two reasons: The first is that neighboring neurons often end up with similar weights, which can lead to overfitting, so dropping some out at random can remove this. The second is that often a neuron can over-weigh the input from a neuron in the previous layer, and can over specialize as a result. Thus, dropping out can break the neural network out of this potential bad habit! 
+
+![alt text](https://miro.medium.com/max/700/1*oB3S5yHHhvougJkPXuc8og.gif)
